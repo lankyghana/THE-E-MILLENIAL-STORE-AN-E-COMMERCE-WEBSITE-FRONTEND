@@ -1,0 +1,2 @@
+const PAYSTACK_PUBLIC_KEY = "pk_test_REPLACE_WITH_YOUR_KEY";
+const CURRENCY = "GHS";
