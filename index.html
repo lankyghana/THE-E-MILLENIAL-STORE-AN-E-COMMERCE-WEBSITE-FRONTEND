@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EMS | The E-Millennial Store</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <header class="navbar">
+    <a href="#intro" class="navbar__logo">
+      <img src="assets/images/EMS.svg" alt="EMS logo" />
+    </a>
+    <nav class="navbar__links">
+      <a href="#intro">Intro</a>
+      <a href="#about">About</a>
+      <a href="#shop">Shop</a>
+    </nav>
+    <button type="button" class="cart-toggle" id="cart-toggle">
+      <img src="assets/images/cart.svg" alt="" />
+      <span id="cart-count">0</span>
+    </button>
+  </header>
+
+  <main>
+    <section id="intro" class="hero">
+      <div class="hero__content">
+        <h1 class="hero__title">The<br />E-Millenial<br />Store</h1>
+        <a href="#shop" class="btn btn--primary">Shop Now</a>
+      </div>
+      <div class="hero__image">
+        <img src="assets/images/heroImage.png" alt="Assortment of gadgets" />
+      </div>
+    </section>
+
+    <section id="about" class="about">
+      <p>
+        E-Millenial Store is a hypothetical online store for gadgets we believe every
+        'Millenial' or 'Gen-Z' should have today. We've got mobile phones, laptops,
+        smartwatches and other gadgets. Explore all our gadgets and choose the ones that
+        suit you.
+      </p>
+    </section>
+
+    <section id="shop" class="shop">
+      <h2 class="shop__heading">Our Gadgets</h2>
+      <ul class="shop__grid" id="shop-grid"></ul>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__logo">
+      <img src="assets/images/EMS.svg" alt="EMS logo" />
+    </div>
+    <p class="footer__credit">Designed and Crafted by a Daniel K. Takyi; Frontend Project</p>
+  </footer>
+
+  <div class="cart-overlay" id="cart-overlay"></div>
+  <aside class="cart-drawer" id="cart-drawer" aria-label="Shopping cart">
+    <div class="cart-drawer__header">
+      <h2>Your Cart</h2>
+      <button type="button" class="cart-close" id="cart-close" aria-label="Close cart">&times;</button>
+    </div>
+
+    <div id="cart-body">
+      <p class="cart-empty" id="cart-empty">Your cart is empty.</p>
+      <ul class="cart-items" id="cart-items"></ul>
+      <div class="cart-drawer__footer">
+        <div class="cart-total">
+          <span>Total</span>
+          <span id="cart-total">GHS 0.00</span>
+        </div>
+        <label for="checkout-name">Full name</label>
+        <input type="text" id="checkout-name" placeholder="Danny K" />
+        <p class="field-error" id="checkout-name-error" hidden>Enter your name to continue.</p>
+        <label for="checkout-email">Email address</label>
+        <input type="email" id="checkout-email" placeholder="you@example.com" />
+        <p class="field-error" id="checkout-email-error" hidden>Enter a valid email to continue.</p>
+        <button type="button" class="btn btn--primary" id="checkout-btn" disabled>
+          Checkout with Paystack
+        </button>
+      </div>
+    </div>
+
+    <div class="cart-confirmation" id="cart-confirmation" hidden>
+      <img src="assets/images/check.svg" alt="" />
+      <h3 id="confirmation-message">Payment successful, thank you!</h3>
+      <ul class="order-summary" id="order-summary-items"></ul>
+      <p class="order-summary-total">Total paid: <span id="order-summary-total"></span></p>
+      <button type="button" class="btn btn--primary" id="cart-continue-btn">Continue shopping</button>
+    </div>
+  </aside>
+
+  <script src="https://js.paystack.co/v1/inline.js"></script>
+  <script src="assets/js/config.js"></script>
+  <script src="assets/js/products.js"></script>
+  <script src="assets/js/cart.js"></script>
+  <script src="assets/js/checkout.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
