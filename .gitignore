@@ -1,0 +1,9 @@
+# Environment variables — contains real API keys, never commit
+assets/js/env.js
+
+# OS / editor junk
+.DS_Store
+Thumbs.db
+.vscode/
+*.suo
+*.user
