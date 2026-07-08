@@ -32,6 +32,7 @@ function initShopGridEvents() {
     const btn = event.target.closest('button[data-action="add-to-cart"]');
     if (!btn) return;
     addToCart(btn.dataset.id);
+    openCartDrawer();
   });
 }
 
